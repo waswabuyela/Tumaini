@@ -1,556 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <style>
-        img:hover{
-        transform: scale(1.1);
-        }
-        img{
-            transition: 1s;
-        }
-        h1{
-            text-decoration: overline;
-        }
-        body{
-            padding: 10px;
-        }
-        .mine{
-            padding: 10px;
-            font-size: 18px;
-        }
-        .ours{
-            transition: 1s;
-        }
-        .ours:hover{
-            transform: scale(1.2);
-        }
-        .transparentbg{
-            background-color: rgb(0, 15, 12, 0.7);
-        }
-    </style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>academy de fussball</title>
+    <link rel="stylesheet" href="AOS_dist/aos.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+
+    <style></style>
     <script src="js/bootstrap.js"></script>
+  </head>
+  <body>
+    <!-- section one starts here -->
 
-</head>
-<body>
-    <!-- section 1 starts here -->
-     <h2>One</h2>
+    <!-- the section below carries the navbar -->
     <section class="row">
-        <div class="col-md-12">
-            <!-- below nav tag carries all the contents of the navbar -->
-             <nav class="navbar navbar-expand-md navbar-secondary bg-secondary">
-                <a href="#" class="navbar-brand"><b>Tumaini Collections</b></a>
-                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#items">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <!-- below div carries navbar links -->
-                 <div class="collapse navbar-collapse" id="items">
-                    <div class="navbar-nav">
-                        <a href="index.html" class="nav-link active">Home</a>
-                        <a href="Beddings.html" class="nav-link">Beddings</a>
-                        <a href="appliances.html" class="nav-link">Appliances</a>
-                        <a href="electronics.html" class="nav-link">Electronics</a>
-                        <a href="fashion.html" class="nav-link">Fashion</a>
-                        <!-- below is adropdown menu with more options in 'see more' -->
-                         <div class="nav-item dropdown bg-success">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">see More</a>
-                            <ul class="dropdown-menu">
-                                <a href="#" class="dropdown-item">About us</a>
-                                <a href="#" class="dropdown-item">Contact us</a>
-                            </ul>
-                         </div>
-                    </div>
-                    <div class="navbar-nav ms-auto">
-                        <a href="" class="nav-button btn btn-outline-info m-2" data-bs-toggle="modal" data-bs-target="#login-modal">Login</a> <br><br>
-                        
-                        <a href="" class="nav-button btn btn-outline-primary m-2" data-bs-toggle="modal" data-bs-target="#registration-modal">Register</a>
-                    </div>
-                 </div>
-             </nav>
-        </div>
+      <div class="col-md-12">
+        <nav class="navbar navbar-expand-md navbar-danger">
+          <a href="#" class="navbar-brand"> <b>DIE MANNSCHAFT</b></a>
+          <button
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#items"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- below div carries the navbar links -->
+          <div class="collapse navbar-collapse" id="items">
+            <div class="navbar-nav">
+              <a href="index.html" class="nav-link active">Home</a>
+              <a href="squad.html" class="nav-link">Squad</a>
+            </div>
+
+            <div class="navbar-nav ms-auto">
+              <a
+                href=""
+                class="nav-button btn btn-outline-info m-2"
+                data-bs-toggle="modal"
+                data-bs-target="#login-modal"
+                >Login</a
+              ><br /><br />
+
+              <a
+                href=""
+                class="nav-button btn btn-outline-danger m-2"
+                data-bs-toggle="modal"
+                data-bs-target="#register-modal"
+                >Register</a
+              >
+            </div>
+          </div>
+        </nav>
+      </div>
     </section>
-     <!-- section 1 ends here -->
-
-     <!-- The Modal -->
-      <!--Registration Modal starts here -->
-
-      <div class="modal fade" id="registration-modal">
-        <!-- Below div will carry the modal dialog -->
-         <div class="modal-dialog">
-            <!-- Below div will carry the 3 sections of the modal -->
-             <div class="modal-content">
-                <div class="modal-header">
-                    <h3 class="text-primary text-center text-capitalize">
-                        Enter Your Registrayion Details
-                    </h3>
-                 </div>
-                 <!-- Modal Body -->
-                  <div class="modal-body">
-                    <form>
-                        <label>First Name:</label> <br>
-                        <input type="text" placeholder="Enter Your First name" class="form-control">
-
-                        <label>Last Name:</label> <br>
-                        <input type="text" placeholder="Enter Your Last name" class="form-control">
-
-                        <label>Email adress:</label> <br>
-                        <input type="Email" placeholder="Enter Your Email Adress" class="form-control">
-
-                        <label>Phone Number:</label> <br>
-                        <input type="Number" placeholder="Enter Your Phone NUmber" class="form-control">
-
-                        <label>Password:</label> <br>
-                        <input type="password" placeholder="Enter Your Password here" class="form-control">
-
-                        <label>Confirm Password:</label> <br>
-                        <input type="password" placeholder="Kindly Confirm Your Password" class="form-control"> <br>
-        
-
-                        <input type="submit" value="Register" class="btn btn-outline-danger">
-                    </form>
-                  </div>
-                  <!-- MOdal Footer -->
-
-                  <div class="modal-footer">
-                    <button class="btn-close" data-bs-dismiss="modal"></button>
-                  </div>
-             </div>
-         </div>
-      </div>
-       <!--Tregistration Modal ends here -->
-
-       <!-- login modal starts here -->
-
-       <div class="modal fade" id="login-modal">
-        <!-- Below div will carry the modal dialog -->
-         <div class="modal-dialog">
-            <!-- Below div will carry the 3 sections of the modal -->
-             <div class="modal-content">
-                <div class="modal-header">
-                    <h3 class="text-primary text-center text-capitalize">
-                        Enter Your Login Details
-                    </h3>
-                 </div>
-                 <!-- Modal Body -->
-                  <div class="modal-body">
-                    <form>
-                        
-                        <label>Email adress:</label> <br>
-                        <input type="Email" placeholder="Enter Your Email Adress" class="form-control">
-
-                        <label>Password:</label> <br>
-                        <input type="password" placeholder="Enter Your Password here" class="form-control">
-
-                        <input type="submit" value="login" class="btn btn-outline-info">
-                    </form>
-                  </div>
-                  <!-- MOdal Footer -->
-
-                  <div class="modal-footer">
-                    <button class="btn-close" data-bs-dismiss="modal"></button>
-                  </div>
-             </div>
-         </div>
-      </div>
-
-
-        <!-- login modal ends here -->
-
+    <!-- section 1 ends here -->
 
     <!-- section 2 starts here -->
+    <center>
+      <h1 class="text-white bg-danger">WELCOME TO ACADEMY DE FUSSBALL.</h1>
+    </center>
 
-    <section class="row">
-        <div class="col-md-12">
-            <!-- below div will carry the three sections of a caroucel -->
-             <div class="carousel slide" data-bs-ride="carousel" id="mycarousel">
-                <!-- wrapper starts here -->
-                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="images/slide4.jpg" alt="" class="d-block w-100">
-                        <div class="carousel-caption">
-                            <h2>Care skin</h2>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam illo dolorum, accusamus tempora error vitae.</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/slide2.jpg" alt="" class="d-block w-100">
-                        <div class="carousel-caption transparentbg ">
-                            <h2 class="text-primary">Smooth skin</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda odio dolorem enim? Eveniet, blanditiis nobis.</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/slide3.jpg" alt="" class="d-block w-100">
-                        <div class="carousel-caption">
-                            <h2>Smooth skin</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda odio dolorem enim? Eveniet, blanditiis nobis.</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/slide2.jpg" alt="" class="d-block w-100">
-                    </div>
-                 </div>
-                <!-- wrapper ends here -->
-                 <!-- controller starts here -->
-
-                <a href="#mycarousel" data-bs-slide="prev" class="carousel-control-prev">
-                    <span class="carousel-control-prev-icon bg-danger"></span>
-                </a>
-                <a href="#mycarousel" data-bs-slide="next" class="carousel-control-next">
-                    <span class="carousel-control-next-icon bg-danger"></span>
-                </a>
-
-                  <!-- controller ends here -->
-
-                  <!-- indicator starts here -->
-
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#mycarousel" class="active bg-danger" data-bs-slide-to="0" style="border-radius: 50%; width: 12px;
-                        height: 12px;">
-                        </button>
-
-                        <button type="button" data-bs-target="#mycarousel" class="bg-danger" data-bs-slide-to="2" style="border-radius: 50%; width: 12px; height: 12px;">
-                        </button>
-
-                        <button type="button" data-bs-target="#mycarousel" class="bg-danger" data-bs-slide-to="3" style="border-radius: 50%; width: 12px; height: 12px;">
-                        </button>
-                    </div>
-
-                   <!-- indicator ends here -->
-
-             </div>
-        </div>
+    <section class="row" data-aos="fade-up" data-aos-duration="2000">
+      <div class="col-md-6">
+        <img
+          src="images/ars1.jpeg"
+          alt=""
+          width="100%"
+          height="100%"
+        />
+      </div>
+      <div class="col-md-6">
+        <img src="images/ars2.jpeg" alt="" width="100%" height="100%" />
+      </div>
     </section>
-
-
     <!-- section 2 ends here -->
 
-   <h2>Three</h2> 
-   <!-- section 3 starts here -->
-    <section class="row p-3 text-center">
-       <div class="col-md-3">
-        <img src="images/advert.jpg" alt="" height="450px" width="80%">
-       </div>
-       <div class="col-md-3">
-        <img src="images/alionskettle.jpg" alt="" height="250px" width="250px"> 
-      
-        <h5>Alions kettle</h5>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, hic iusto repudiandae perspiciatis porro eaque!</p>
-        <b class="text-warning">2,300 kes</b> <br>
-        <span class="badge bg-danger mine">10% 0ff</span>
-       </div>
+    <!-- below div starts here -->
+    <div class="bg-primary p-4" style="background: #cc0cbc;
+        background: linear-gradient(0deg, rgba(231, 31, 4, 0.575) 0%, rgb(247, 5, 5) 100%); font-size: 30px; poppins" data-aos="fade-down" data-aos-duration="2000">
+            <center><p>    Welcome to our Football Academy!
 
-       <div class="col-md-3">
-        <img src="images/Mika2slicetoaster.png" alt="" height="250px" width="250px">
-        <h5>Mika toaster</h5>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, hic iusto repudiandae perspiciatis porro eaque!</p>
-        <b class="text-warning">2,100 kes</b> <br>
-        <span class="badge bg-danger mine">5% 0ff</span>
-       </div>
-       <div class="col-md-3">
-        <img src="images/cooker.jpg" alt="" height="250px" width="250px">
-        <h5>Pro cooker</h5>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, hic iusto repudiandae perspiciatis porro eaque!</p>
-        <b class="text-warning">3,300 kes</b> <br>
-        <span class="badge bg-danger mine">20% 0ff</span>
-       </div>
-    
-    </section>
-    <hr>
-        <!-- section 3 ends here -->
-        <!-- section 4 starts here -->
-        <h2>Four</h2>
-        <section class="row p-3">
-            <div class="col-md-6">
-                <img src="images/advert1.jpg" alt="" width="97%">
-            </div>
-            <div class="col-md-6">
-                <img src="images/advert2.jpg" alt="" width="97%">
-            </div>
-        </section><hr>
-        <!-- section 4 ends here -->
-
-         <!-- section 5 starts here -->
-          <h2>Five</h2>
-          <h1>Beddings</h1>
-          <section class="row text-center">
-            <div class="col-md-3">
-                <img src="images/bed1.jpg" alt="" height="250px" width="250px">
-                <h5>Floral Beddings</h5>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, totam!</p>
-                <b class="text-warning">2,300 kes</b> <br>
-                <span class="badge bg-danger mine">10% off</span>
-            </div>
-            <div class="col-md-3">
-                <img src="images/bed2.jpg" alt="" height="250px" width="250px">
-                <h5>Duvet pure white</h5>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, totam!</p>
-                <b class="text-warning">2,300 kes</b> <br>
-                <span class="badge bg-danger mine">20% off</span>
-            </div>
-            <div class="col-md-3">
-                <img src="images/bed3.jpg" alt="" height="250px" width="250px">
-                <h5>Plain double sided</h5>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, totam!</p>
-                <b class="text-warning">3,800 kes</b> <br>
-                <span class="badge bg-danger mine">10% off</span>
-            </div>
-            <div class="col-md-3">
-                <img src="images/bed4.jpeg" alt="" height="250px" width="250px">
-                <h5>Binded quality</h5>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, totam!</p>
-                <b class="text-warning">5,300 kes</b> <br>
-                <span class="badge bg-danger mine">30% off</span>
-            </div>
-            
-          </section><hr>
-          <!-- section 5 ends here -->
-           <!-- section 6 starts here -->
-            <h2>Six</h2>
-            <h1>Home Decor</h1>
-            <section class="row">
-                <div class="col-md-3">
-                    <img src="images/decor1.jpg" alt="" height="250px" width="250px">
-                    <h5>Curtains Decor</h5>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta, magnam.</p>
-                    <b>kes 2,300</b> <br>
-                    <span class="badge bg-danger mine">20% off</span>
-                </div>
-                <div class="col-md-3">
-                    <img src="images/decor2.jpg" alt="" height="250px" width="250px">
-                    <h5>Soft Fluffy Carpets</h5>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta, magnam.</p>
-                    <b>kes 8,300</b> <br>
-                    <span class="badge bg-danger mine">20% off</span>
-                </div>
-                <div class="col-md-3">
-                    <img src="images/decor3.jpg" alt="" height="250px" width="250px">
-                    <h5>Generic Soft Tender</h5>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta, magnam.</p>
-                    <b>kes 6,300</b> <br>
-                    <span class="badge bg-danger mine">20% off</span>
-                </div>
-                <div class="col-md-3">
-                    <img src="images/decor4.jpg" alt="" height="250px" width="250px">
-                    <h5>Fully Patched 5by8</h5>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta, magnam.</p>
-                    <b>kes 4,300</b> <br>
-                    <span class="badge bg-danger mine">20% off</span>
-                </div>
-            </section>
-            <!-- section 6 ends here -->
-             <!-- section seven starts here -->
-            <h2>Seven</h2>
-            <h1>TV Screens</h1>
-            <section class="row">
-                <div class="col-md-3">
-                    <img src="images/screen1.jpg" alt="" height="250px" width="250px">
-                    <h5>Synix 32Inch</h5>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta, magnam.</p>
-                    <b>kes 23,300</b> <br>
-                    <span class="badge bg-danger mine">50% off</span>
-                </div>
-                <div class="col-md-3">
-                    <img src="images/screen2.jpg" alt="" height="250px" width="250px">
-                    <h5>TCL 32Inch Frameless</h5>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta, magnam.</p>
-                    <b>kes 18,300</b> <br>
-                    <span class="badge bg-danger mine">10% off</span>
-                </div>
-                <div class="col-md-3">
-                    <img src="images/screen3.jpg" alt="" height="250px" width="250px">
-                    <h5>Hisense 32InchCurved</h5>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta, magnam.</p>
-                    <b>kes 30,000</b> <br>
-                    <span class="badge bg-danger mine">15% off</span>
-                </div>
-                <div class="col-md-3">
-                    <img src="images/screen4.jpg" alt="" height="250px" width="250px">
-                    <h5>Sumsung 24Inch</h5>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta, magnam.</p>
-                    <b>kes 20,300</b> <br>
-                    <span class="badge bg-danger mine">20% off</span>
-                </div> 
+                We’re thrilled to have you join our vibrant community of football enthusiasts and aspiring players. At our academy, we’re dedicated to nurturing talent and fostering a love for the game. Whether you're just starting out or looking to refine your skills, our experienced coaches and cutting-edge facilities are here to support your journey.
                 
-                <!-- section 7 ends here -->
-                 <!-- section 8 starts here -->
-                  <h2>Eight</h2>
-                  <h1>Smartphones</h1>
-                 <section class="row text-center">
-                    <div class="col-md-4">
-                        <div class="card shadow"><img src="images/phone4.jpg" alt="">
-                           <div class="card-body">
-                            <h5>Google pixel 6, 5g</h5>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, asperiores!</p>
-                            <b class="text-warning">ksh 13,300</b> <br>
-                            <span class="badge bg-danger mine">15% off</span>
-                           </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card shadow"><img src="images/phone5.jpg" alt="">
-                           <div class="card-body">
-                            <h5>Techno Pop 7, 6.6Inch</h5>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, asperiores!</p>
-                            <b class="text-warning">ksh 23,999</b> <br>
-                            <span class="badge bg-danger mine">10% off</span>
-                           </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card shadow"><img src="images/phone3.jpg" alt="">
-                           <div class="card-body">
-                            <h5>Itel A18, 5.0Inch</h5>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, asperiores!</p>
-                            <b class="text-warning">ksh 8,300</b> <br>
-                            <span class="badge bg-danger mine">10% off</span>
-                           </div>
-                        </div>
-                    </div>
-              
-                 </section>
-                 <!-- section 8 ends here -->
+                Here, you'll find a dynamic environment where teamwork, discipline, and passion come together to help you achieve your goals.</p></center>
+    </div>
+    <!-- above div ends here -->
 
-                 <!-- section 11 starts here -->
+            <h2 class="text-white bg-danger" data-aos="fade-left" data-aos-duration="2000"><marquee direction="">Our dedicated staff is more than ready to develop your skills and elevate you to the next level.Dont forget to follow us on social media.</marquee></h2>
 
-                 <h2>Eleven</h2>
-                 <h1>Latest Brands</h1>
-                 <section class="row ">
-                    <div class="col-md-3 ours">
-                     <div class="card">
-                        <div class="card-body shadow">
-                            <h3>ARMCO</h3>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-                     </div>
+            <!-- section 3 starts here -->
+          <section class="row text-white bg-secondary" data-aos="fade-up" data-aos-duration="2000">
+            <div class="col-md-4">
+              <h3>We value your feedback:</h3> 
+              <textarea placeholder="Leave a comment:" class="form-control" rows="5"></textarea><br>
 
-                    </div>
+              <input type="button" value="send" class="btn btn-outline-danger">
+            </div>
 
-                   
+            <div class="col-md-4">
+              <h3>Follow our socials:</h3>
+              <img src="images/fb.png" alt="">
+              <img src="images/in.png" alt="">
+              <img src="images/x.png" alt="">
+              <p>You can also check out our youtube channel, "academy de fussball" where we have tutorials that help you know more about our goals and aspirations, our location, and the different sessions we offer at our academy.</p>
+            </div>
 
-                    <div class="col-md-3 ours">
-                        <div class="card shadow">
-                            <h3>Hisence</h3>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, inventore.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 ours">
-                        <div class="card shadow">
-                            <h3>Vitron</h3>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, inventore.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 ours">
-                        <div class="card shadow">
-                            <h3>Synix</h3>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, inventore.</p>
-                        </div>
-                    </div>
+            <div class="col-md-4">
+              <h3>Our core values:</h3>
+              <ul>
+                <li>Hardwork</li>
+                <li>Discipline</li>
+                <li>Dedication</li>
+                <li>Team work</li>
+                <li>Positivity</li>
+              </ul>
+            </div>
+          </section> 
 
-                 </section>
-                 <!-- section 11 ends here -->
-
-                 <!-- section 9 starts here -->
-                  <h2>Nine</h2>
-                  <h1>Latest News</h1>
-
-                  <section class="row">
-                    <div class="col-md-4">
-                        <div>
-                            <h3>Business</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, eligendi?</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div>
-                            <h3>Beauty</h3>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum, quae.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div>
-                            <h3>Lifestyle</h3>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta, dolor?</p>
-                        </div>
-                    </div>
-                  </section>
-                  <!-- section 9 ends here -->
-
-                  <!-- section 10 starts here -->
-
-                  <h2>Ten</h2>
-                  <h1>Bathroom Accessories</h1>
-                  <div class="row">
-                    <div class="col-md-3">
-                        <div class="card">
-                            <img src="images/advert.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card">
-                            <img src="images/bath2.jpg" alt="">
-                           <center> <h3>Generic soft Nylon</h3></center>
-                          <center> <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p></center> <br>
-                          <span><strike>5,500kes</strike> <b class="text-warning">kes 3,400</b></span> 
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card">
-                            <img src="images/bath3.jpg" alt="">
-                            <center> <h3>Kids Toothbrush Salicon</h3></center>
-                          <center> <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p></center> <br>
-                          <span><strike>1,500kes</strike> <b class="text-warning">kes 900</b></span> 
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card"><img src="images/bath4.jpg" alt=""></div>
-                        <center> <h3>Generic & Hook</h3></center>
-                          <center> <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p></center> <br>
-                          <span><strike>5,500kes</strike> <b class="text-warning">kes 1,000</b></span> 
-                    </div>
-                  </div>
+          <!-- footer begins here -->
+           <footer class="bg-danger">
+            <b><center>Developed By Digme. &copy;2024.All Rights Reserved. &trade;</center></b>
+           </footer>
+           <!-- footer ends here -->
+          <!-- section 3 ends here -->
 
 
-                  <!-- section 12 starts here -->
+  
 
-                  <section class="row p-3 bg-warning">
-                <div class="col-md-4 text-white">
-                    <h2>About us</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam provident facere dolore rem voluptatem nostrum?</p>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque rerum minus eligendi deserunt unde ex ea quaerat ducimus earum quo, ipsa architecto reprehenderit, ab eum! Beatae vitae quibusdam doloribus laborum.</p>
-                </div>
-                <div class="col-md-4">
-                    <h2>Contact us</h2>                                          
-                    <form >
-                        <input type="Email" placeholder="Enter your Email adress class"form-control"" class="form-control"> <br> <br>
-                <textarea placeholder="Leave a comment" class="form-control"></textarea> <br><br>
+    <script src="AOS_dist/aos.js"></script>
+    <script>
+      AOS.init({
+        easing: "ease-in-out-sine",
+      });
+    </script>
 
-                        <input type="button" value="Send message" class="btn btn-outline-danger">
-
-                        
-                        
-                    </form>
-                </div>
-                <div class="col-md-4 text-white">
-                    <h2>Stay Connected</h2>
-                    <img src="images/fb.png" alt="">
-                    <img src="images/in.png" alt="">
-                    <img src="images/x.png" alt="">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem perferendis ratione nulla accusamus modi praesentium officia ex minus cupiditate nisi, ducimus consectetur doloribus harum illo dolorum officiis, dolore aut. Eligendi, molestias? Accusamus numquam officiis dolore.</p>
-                </div>
-
-                    </div>
-                  </section>
-
-                  <footer class="bg-black text-white">
-                  <b>  <center>Developed by X. &copy;2024.All Rights Reserved</center></b>
-                  </footer>
-
-                   <!-- section 12 ends here -->
-
-
-</body>
+  </body>
 </html>
